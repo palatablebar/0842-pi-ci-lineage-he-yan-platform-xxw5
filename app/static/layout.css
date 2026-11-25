@@ -1,0 +1,36 @@
+.p0842 .shell{display:block}
+.p0842 .rail{display:flex;align-items:center;gap:14px;border:0;border-bottom:1px dashed var(--ink);background:transparent;padding:8px 14px}
+.p0842 .rail-label,.p0842 .rail-note{display:none}.p0842 #stage-nav{flex-direction:row;flex-wrap:wrap}.p0842 #stage-nav button{border:0;border-bottom:1px dotted var(--line);border-radius:0;padding:3px 6px}
+.p0842 .brand{width:auto;padding:2px 8px;border-radius:0;border-style:dashed}
+.p0842 .toolbar{background:transparent;border-style:dashed}
+.p0842 main{max-width:1280px;margin:0 auto;padding:10px 18px}
+.p0842 .kpis{grid-template-columns:repeat(4,1fr)}
+.p0842 .metric{border:0;border-left:1px dashed var(--accent);border-radius:0;background:transparent}
+.p0842 .board{grid-template-columns:1.4fr .6fr}
+.p0842 #panel-table{grid-column:1/-1}.p0842 #panel-review{grid-column:1/-1}
+.p0842 .panel{border:0;border-top:1px dashed var(--ink);border-radius:0;background:transparent;padding:12px 0}
+.p0842 .panel-head::before{content:"$ ";color:var(--accent)}
+.p0842 th{border-bottom:1px dashed var(--line)}
+.p0842 .statusbar{border-top-style:dashed}
+
+@media (max-width: 980px) {
+  .p0842 .board { grid-template-columns: minmax(0,1fr) !important; grid-template-areas: none !important; }
+  .p0842 .board > * { grid-column: auto !important; grid-row: auto !important; grid-area: auto !important; }
+  .p0842 .kpis { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+}
+@media (max-width: 680px) {
+  .p0842 .shell { display: block !important; }
+  .p0842 .rail { height: auto !important; min-height: 0 !important; position: static !important; padding: 10px 12px !important; }
+  .p0842 .rail::after { display: none !important; }
+  .p0842 .rail-label, .p0842 .rail-note { display: none !important; }
+  .p0842 #stage-nav { flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; }
+  .p0842 #stage-nav button { width: auto !important; border-left: 0 !important; border-bottom: 2px solid transparent !important; white-space: nowrap; }
+  .p0842 #stage-nav button[aria-pressed="true"] { border-bottom-color: var(--accent) !important; }
+  .p0842 .toolbar { padding: 16px 14px !important; }
+  .p0842 .toolbar h1 { font-size: clamp(22px,8vw,38px); }
+  .p0842 main { padding: 8px !important; }
+  .p0842 .kpis { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+  .p0842 .metric:nth-child(2) { transform: none !important; }
+  .p0842 .panel, .p0842 .metric { min-width: 0 !important; }
+  .p0842 .table-wrap { max-width: 100%; overflow-x: auto; }
+}
